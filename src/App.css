@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+/* this style for Header*/
+.Head {
+    height: clamp(80px, 15vw, 100px);
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ECDFCC;
+    position: sticky;
+    transition: all 0.5s ease;
+    top: 0px;
+    background-color: rgba(60, 61, 55, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.alignment {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.Head.Scrolled {
+    width: 98%;
+    height: clamp(70px, 13vw, 90px);
+    border-radius: 10px;
+    border: 1px solid #ECDFCC;
+}
+
+.Head.Scrolled h1 {
+    font-size: clamp(20px, 4vw, 30px);
+    transition: all 0.5s ease;
+}
+
+.Head.Scrolled p {
+    font-size: clamp(17px, 3vw, 18px);
+    transition: all 0.5s ease;
+}
+
+.Head h1 {
+    font-size: clamp(23px, 5vw, 32px);
+    font-family: "Bungee", sans-serif;
+    background-color: transparent;
+    color: rgba(255, 183, 0, 1);
+    transition: all 0.5s ease;
+}
+
+.Head p {
+    background-color: transparent;
+    font-size: clamp(19px, 3vw, 23px);
+    font-family: "Style Script", cursive;
+    transition: all 0.5s ease;
+    margin: 0px 10px;
+}
+
+.testing {
+    height: 1000px;
+    width: 100%;
+}
+
+/* This style for Task form*/
+.Enterhead {
+    text-align: center;
+    margin-top: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+
+}
+
+form input,
+form select,
+form button {
+    font-size: clamp(12px, 2vw, 16px);
+    width: 90%;
+    height: 30px;
+    border: 1px solid #ECDFCC;
+    border-radius: 10px;
+    transition: all 0.1s ease;
+    padding-left: 10px;
+}
+
+form input:focus,
+select:focus {
+    border: 2px solid rgba(255, 183, 0, 1);
+    outline: none;
+    /* transition: all 0.3s ease; */
+}
+
+button {
+    padding-left: 0;
+    width: 100px;
+    background-color: #ffb700;
+    color: black;
+    /* transition: all 0.1s ease; */
+}
+
+button:hover {
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(219, 158, 4);
+    transform: scale(95%, 95%);
+}
+
+@media(min-width:600px) {
+
+
+    form div {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        /* flex-wrap: wrap; */
+        width: 95%;
+        height: 150px;
+    }
+
+    form input {
+        width: clamp(300px, 35vw, 500px);
+    }
+
+    form input,
+    form select,
+    form button {
+        height: 45px;
+    }
+
+    form button {
+        width: clamp(100px, 20vw, 200px);
+        margin-left: auto;
+    }
+
+    form select {
+        width: 100px;
+    }
+
+
+}
+
+/* List's style */
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: clamp(13px, 2vw, 16px);
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.Taskhead {
+    text-align: center;
+    margin: 10px;
+}
+
+.lists li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    /* height: 100px; */
+    padding: 10px 20px 10px 20px;
+    /* border: 1px solid white; */
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    background-color: #484942;
+}
+
+.lists li:hover {
+    outline: 1px solid #ECDFCC;
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+.lists li .btnflex {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.btnflex button {
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: all 0.1s ease;
+    font-size: clamp(13px, 2vw, 16px);
+}
+
+@media(min-width :850px) {
+    .lists {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+/* Progress tracker design */
+
+/* .tracker {
+    text-align: center;
+    font-size: clamp(13px, 2vw, 16px);
+}
+
+.tracker-bg {
+    background-color: white;
+    width: 100%;
+    height: 15px;
+    padding: 10px;
+} */
+
+.tracker {
+    font-size: clamp(13px, 2vw, 16px);
+}
+
+.tracker-bg {
+    height: 15px;
+    width: 85%;
+    background-color: #606159;
+    border-radius: 10px;
+}
+
+.Main-tracker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actual-tracker {
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    background: linear-gradient(90deg, rgba(255, 183, 0, 1) 0%, rgba(255, 234, 163, 1) 100%);
+}
+
+.clear-btn {
+    background-color: rgba(255, 183, 0, 1);
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: clamp(13px, 2vw, 16px);
+
+}
